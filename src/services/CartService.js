@@ -6,7 +6,7 @@ const productService = new ProductService();
 Schema
     cart = {
         id: Number,
-        timestamp: date, 
+        timestamp: date(), 
         product: [], 
 }
 */
