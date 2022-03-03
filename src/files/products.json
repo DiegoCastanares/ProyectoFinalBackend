@@ -1,0 +1,78 @@
+[
+  {
+    "name": "kindle",
+    "description": "una kindle",
+    "thumbnail": "una imagen",
+    "price": 123,
+    "stock": 1,
+    "id": 2,
+    "timestamp": "2022-03-03T09:01:52.506Z",
+    "code": 1646298112508
+  },
+  {
+    "name": "kindle2",
+    "description": "otra kindle",
+    "thumbnail": "otra imagen",
+    "price": 1234,
+    "stock": 2,
+    "id": 3
+  },
+  {
+    "name": "kindle2",
+    "description": "otra kindle",
+    "thumbnail": "otra imagen",
+    "price": 1234,
+    "stock": 2,
+    "id": 4
+  },
+  {
+    "name": "kindle",
+    "description": "una kindle",
+    "thumbnail": "una imagen",
+    "price": 123,
+    "stock": 1,
+    "id": 5,
+    "timestamp": "2022-03-03T09:01:57.167Z",
+    "code": 1646298117172
+  },
+  {
+    "name": "kindle",
+    "description": "una kindle",
+    "thumbnail": "una imagen",
+    "price": 123,
+    "stock": 1,
+    "id": 6,
+    "timestamp": "2022-03-03T09:01:58.030Z",
+    "code": 1646298118036
+  },
+  {
+    "name": "kindle",
+    "description": "una kindle",
+    "thumbnail": "una imagen",
+    "price": 123,
+    "stock": 1,
+    "id": 7,
+    "timestamp": "2022-03-03T18:01:42.834Z",
+    "code": 1646330502841
+  },
+  {
+    "name": "kindle",
+    "description": "una kindle",
+    "thumbnail": "una imagen",
+    "price": 123,
+    "stock": 1,
+    "id": 9,
+    "timestamp": "2022-03-03T18:13:34.324Z",
+    "code": 1646331214333
+  },
+  {
+    "name": "kindle",
+    "description": "una kindle",
+    "thumbnail": "una imagen",
+    "price": 123,
+    "stock": 1,
+    "id": 10,
+    "timestamp": "2022-03-03T18:25:49.655Z",
+    "code": 1646331949665
+  }
+]
