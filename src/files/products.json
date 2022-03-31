@@ -74,5 +74,35 @@
     "id": 10,
     "timestamp": "2022-03-03T18:25:49.655Z",
     "code": 1646331949665
+  },
+  {
+    "name": "kindle",
+    "description": "una kindle",
+    "thumbnail": "una imagen",
+    "price": 123,
+    "stock": 1,
+    "id": 11,
+    "timestamp": "2022-03-27T20:21:44.738Z",
+    "code": 1648412504749
+  },
+  {
+    "name": "otra kindle updateada",
+    "description": "otra kindle desde mongo updateada",
+    "thumbnail": "otra imagen",
+    "price": 123,
+    "stock": 1,
+    "id": 12,
+    "timestamp": "2022-03-28T22:40:07.782Z",
+    "code": 1648507207794
+  },
+  {
+    "name": "otra kindle updateada 2",
+    "description": "otra kindle desde mongo updateada 2",
+    "thumbnail": "otra imagen",
+    "price": 123,
+    "stock": 1,
+    "id": 13,
+    "timestamp": "2022-03-28T22:41:31.109Z",
+    "code": 1648507291122
   }
 ]

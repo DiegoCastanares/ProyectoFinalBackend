@@ -11,7 +11,7 @@ Schema
 }
 */
 
-const pathToCarts = "./files/carts.json";
+const pathToCarts = "./src/files/carts.json";
 
 class CartService {
   createCart = async (cart) => {
@@ -55,6 +55,7 @@ class CartService {
   };
 
   deleteCartById = async (id) => {
+    id = parseInt(id);
     if (!id) return { status: "error", error: "ID needed" };
     if (fs.existsSync(pathToCarts)) {
       let data = await fs.promises.readFile(pathToCarts, "utf-8");
@@ -74,6 +75,7 @@ class CartService {
   };
 
   getCartById = async (id) => {
+    id = parseInt(id);
     if (!id) return { status: "error", error: "ID needed" };
     if (fs.existsSync(pathToCarts)) {
       let data = await fs.promises.readFile(pathToCarts, "utf-8");
@@ -85,6 +87,8 @@ class CartService {
   };
 
   addProduct = async (cartId, productId) => {
+    cartId = parseInt(cartId);
+    productId = parseInt(productId);
     try {
       if (!cartId || !productId)
         return { status: "error", error: "missing field" };
@@ -128,6 +132,8 @@ class CartService {
   };
 
   deleteProductById = async (id, prod_id) => {
+    id = parseInt(id);
+    prod_id = parseInt(prod_id);
     if (!id || !prod_id) return { status: "error", error: "missing field" };
     if (fs.existsSync(pathToCarts)) {
       let data = await fs.promises.readFile(pathToCarts, "utf-8");

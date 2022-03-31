@@ -11,7 +11,7 @@ Schema
 }
 */
 
-const pathToProducts = "./files/products.json";
+const pathToProducts = "./src/files/products.json";
 
 class ProductService {
   getAll = async () => {
@@ -24,6 +24,7 @@ class ProductService {
   };
 
   getById = async (id) => {
+    id = parseInt(id);
     if (!id) return { status: "error", error: "ID needed" };
     if (fs.existsSync(pathToProducts)) {
       let data = await fs.promises.readFile(pathToProducts, "utf-8");
@@ -82,7 +83,8 @@ class ProductService {
     }
   };
 
-  updateById = async (id, product) => {
+  updateProduct = async (id, product) => {
+    id = parseInt(id);
     if (
       !product.name ||
       !product.description ||
@@ -124,7 +126,8 @@ class ProductService {
     }
   };
 
-  deletebyId = async (id) => {
+  deleteProduct = async (id) => {
+    id = parseInt(id);
     if (!id) return { status: "error", error: "ID needed" };
     if (fs.existsSync(pathToProducts)) {
       let data = await fs.promises.readFile(pathToProducts, "utf-8");
