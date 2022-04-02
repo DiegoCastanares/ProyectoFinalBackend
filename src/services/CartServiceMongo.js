@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const cartService = require("../model/cart.js");
+const productService = require("../model/product.js");
 
 mongoose.connect(
   "mongodb+srv://Diego:123@codercluster18335.oxenh.mongodb.net/proyectoCoder?retryWrites=true&w=majority",
@@ -38,19 +39,22 @@ class CartServiceMongo {
     else return { status: "error", error: "Null" };
   };
 
-  addProduct = async (id, product) => {
-    let cart = await cartService.findById(id);
+  addProduct = async (cartId, productId) => {
+    let cart = await cartService.findById(cartId);
     if (cart) {
-      cart.product.push(product);
-      await cart.save();
-      return { status: "success", message: "Product added" };
+      let product = await productService.findById(productId);
+      if (product) {
+        cart.product.push(product);
+        await cart.save();
+        return { status: "success", message: "Product added" };
+      } else return { status: "error", error: "Null" };
     } else return { status: "error", error: "Null" };
   };
 
-  deleteProductById = async (id, productId) => {
+  deleteProductById = async (id, id_prod) => {
     let cart = await cartService.findById(id);
     if (cart) {
-      cart.product.splice(cart.product.indexOf(productId), 1);
+      cart.product.splice(cart.product.indexOf(id_prod), 1);
       await cart.save();
       return { status: "success", message: "Product deleted" };
     } else return { status: "error", error: "Null" };
